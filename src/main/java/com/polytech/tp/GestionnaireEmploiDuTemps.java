@@ -3,7 +3,10 @@ package com.polytech.tp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GestionnaireEmploiDuTemps {
+import javax.print.DocFlavor.STRING;
+
+public class GestionnaireEmploiDuTemps implements Subject {
+    private String changement;
     private List<ICours> listeCours = new ArrayList<>();
     private List<Observer> observers = new ArrayList<>(); // <-- liste des observers
 
@@ -35,8 +38,9 @@ public class GestionnaireEmploiDuTemps {
          notifyObservers("Cours modifié : " + message);
     }
 
-   // public void setChangement(String string) {
-        // supprime Auto-generated method stub
-       // throw new UnsupportedOperationException("Unimplemented method 'setChangement'");
-   // }
+    public void setChangement(String string) {
+        this.changement = string;
+        notifyObservers(changement);
+      //hrow new UnsupportedOperationException("Unimplemented method 'setChangement'");
+    }
 }

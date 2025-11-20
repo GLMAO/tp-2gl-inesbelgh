@@ -10,7 +10,7 @@ public class CoursEnLigne extends CoursDecorator {
     public String getDescription() {
         // TODO Auto-generated method stub
         
-        return coursDecorated.getDescription() + " (en ligne)";
+        return coursDecorated.getDescription() + " (En ligne)";
     }
 
     @Override
