@@ -10,6 +10,7 @@ public class GestionnaireEmploiDuTemps {
         this.listeCours.add(cours);
         System.out.println("Nouveau cours ajouté : " + cours.getDescription());
         // TODO: C'est ici qu'il faudrait notifier les étudiants (Observer pattern)
+        notifyObservers("Nouveau cours : " + cours.getDescription());
     }
 
     public void modifierCours(ICours cours, String message) {
